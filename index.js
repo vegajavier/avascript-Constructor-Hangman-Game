@@ -12,10 +12,10 @@ var figlet = require('figlet');
 
 let incorrect = clc.red.bold;
 let correct = clc.green.bold;
-let gameTextColor = clc.cyanBright;
+let instructionTextColor = clc.bgRedBright;
 let userCorrect = false;
 
-let wordList = ["Montana", "Brady","Elway","Rodgers", "Aikman","Bradshaw",];
+let qbList = ["Montana", "Brady","Elway","Rodgers", "Aikman","Bradshaw",];
 
 let randomWord;
 let someWord;
@@ -39,7 +39,7 @@ figlet("QB Hangman", function(err,data ){
     console.log(data)
     //Welcome screen text. --- reference
     console.log(boxen('WELCOME TO QB HANGMAN!', {padding: 1}));
-    console.log(gameTextColor("Name that Legendary NFL QB"));
+    console.log("Name that Legendary NFL QB");
 
     let playGame =
     "   Instructions" + "\n"+
@@ -48,7 +48,7 @@ figlet("QB Hangman", function(err,data ){
     "The correct letter you guessed appears in the word." + "\n" +
     "The incorrect letter you guessed does not appear in the word." + "\n" +
     "_________________________________________________________________________"
-    console.log(playGame);
+    console.log(instructionTextColor(playGame));
 
     startGame();
 });
