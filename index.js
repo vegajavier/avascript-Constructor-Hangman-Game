@@ -3,7 +3,8 @@ let Word = require("./word.js");
 let inquire = require("inquirer");
 /// npm i boxen use this for correct answers
 const boxen = require("boxen");
-//console.log(boxen('unicorn', {padding: 1}));
+//example for later use console.log(boxen('unicorn', {padding: 1}));
+//examples for later use console.log(boxen('unicorn', {padding: 1, margin: 1, borderStyle: 'double'}));
 
 //looking at other code to use clc
 let clc = require("cli-color");
@@ -37,7 +38,7 @@ figlet("QB Hangman", function(err,data ){
     }
     console.log(data)
     //Welcome screen text. --- reference
-    console.log(gameTextColor("Welcome to the QB Hangman Game!"));
+    console.log(boxen('WELCOME TO QB HANGMAN!', {padding: 1}));
     console.log(gameTextColor("Name that Legendary NFL QB"));
 
     let playGame =
@@ -52,6 +53,5 @@ figlet("QB Hangman", function(err,data ){
     startGame();
 });
 
-function startGame()
 
 
