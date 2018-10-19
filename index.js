@@ -35,12 +35,13 @@ let underScores = 0;
 figlet("QB Hangman", function(err,data ){
     if (err){
         //console.log("not working")
-        //n Firefox, these function behave quite differently: log only prints out a toString representation, whereas dir prints out a navigable tree. STACKOVERFLOW..
+        //Firefox, these function behave quite differently: log only prints out a toString representation, whereas dir prints out a navigable tree. STACKOVERFLOW..
         console.dir(err);
         return;
     }
     console.log(data)
-    //Welcome screen text. --- reference---
+ 
+    /// Intro screen - referenced
     console.log(boxen('WELCOME TO QB HANGMAN!', {padding: 1}));
     console.log("Name that Legendary NFL QB");
 
@@ -58,14 +59,14 @@ figlet("QB Hangman", function(err,data ){
 
 function startGame (){
     let infoForStartGame = [{
-        type: 'text',
+        type: 'text',   
         name: "userName",
         message: "Please Enter Your Name"
     },
     {
         type: 'confirm',
         name: 'startplay',
-        message: "Select Y or N to play",
+        message: "Ready to Play?",
         default: true
     }
     ];
@@ -86,6 +87,18 @@ function startGame (){
 });
 }
 
+function startGame(){
+    selectWord();
+    guessedLetters = "";
+    guessedLettersList = [];
+    guessesRemaining = 10;
+
+}
+
+function selectWord(){
+    selectWord = qbList[Math.floor(Math.random() * qbList.length)].toUpperCase();
+    console.log(instructionTextColor("There are " + selectWord.length + ' letters in your word'));
+}
 
 
 
