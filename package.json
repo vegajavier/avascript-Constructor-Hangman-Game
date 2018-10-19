@@ -1,0 +1,22 @@
+{
+  "name": "avascript-constructor-hangman-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vegajavier/avascript-Constructor-Hangman-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vegajavier/avascript-Constructor-Hangman-Game/issues"
+  },
+  "homepage": "https://github.com/vegajavier/avascript-Constructor-Hangman-Game#readme",
+  "dependencies": {
+    "inquirer": "^6.2.0"
+  }
+}
